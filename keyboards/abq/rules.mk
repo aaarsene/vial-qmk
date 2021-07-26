@@ -1,0 +1,6 @@
+MCU = atmega32u2
+BOOTLOADER = atmel-dfu
+
+BOOTMAGIC_ENABLE = lite
+CONSOLE_ENABLE = yes
+TAP_DANCE_ENABLE = yes
