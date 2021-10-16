@@ -1,0 +1,5 @@
+VIA_ENABLE = yes
+VIAL_ENABLE = yes
+
+MOUSEKEY_ENABLE = no	# Mouse keys
+RGBLIGHT_ENABLE = no
