@@ -28,6 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "timer.h"
 #include "matrix.h"
 #include "led.h"
+#include "avr/timer_avr.h"
 
 // Timer resolution check
 #if (1000000/TIMER_RAW_FREQ > 20)
@@ -181,6 +182,12 @@ uint8_t matrix_scan(void)
     }
     matrix_scan_quantum();
     return 1;
+}
+
+inline
+bool matrix_is_on(uint8_t row, uint8_t col)
+{
+    return (matrix[row] & ((matrix_row_t)1<<col));
 }
 
 inline
